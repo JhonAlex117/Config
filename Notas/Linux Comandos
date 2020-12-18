@@ -1,0 +1,33 @@
+Instalacion de archivos .deb
+
+sudo dpkg -i <pakete>
+
+Programas instalados
+
+sudo apt-get install net-tools
+sudo apt-get install rar
+sudo apt-get install wine
+sudo apt-get virtualbox
+
+Borrar archivo y/o carpetas
+rm -rf files/
+
+Comando cerrrar puertos
+sudo /etc/init.d/apache2 stop; sudo /etc/init.d/mysql stop; sudo /etc/init.d/cups stop
+
+sudo ifconfig
+
+rm -rf <archivo>							->	Para eliminar permanentemente
+find . -name "*describcion*"				->	Para encontrar archivo
+
+-- Puertos usb -- Permisos puerto serial
+	https://www.linuxito.com/gnu-linux/nivel-basico/101-como-listar-puertos-serie
+
+
+dar permisos al puerto
+	sudo chmod 777 /dev/ttyUSB0
+
+listar puertos serie utilizados
+
+dmesg | grep tty
+setserial -g /dev/ttyS*

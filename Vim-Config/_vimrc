@@ -1,0 +1,120 @@
+"  -----------------------------------
+"   Plug Gestor de plugins
+"  -----------------------------------
+
+call plug#begin('~/vimfiles/plugged')
+
+"Plug 'preservim/NERDTree'
+  Plug 'scrooloose/nerdtree'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  "Plug 'lambdalisue/nerdfont.vim'
+
+" Temas Visuales
+	Plug 'morhetz/gruvbox' 
+  " Iconos para nerdtree
+  Plug 'ryanoasis/vim-devicons' 
+
+  Plug 'vim-airline/vim-airline'
+" Resaltado de palabras coincididas
+  Plug 'dominikduda/vim_current_word'  
+" Resaltado de colores css
+  Plug 'ap/vim-css-color'   
+"  Plug 'ryanoasis/vim-devicons'
+
+" Menu de navegacion entre documentos (m) para obciones
+
+" Autocompletador coc
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'honza/vim-snippets'
+" Navegacion entre letras de archivo
+	Plug 'easymotion/vim-easymotion'
+
+" Corrector de sintaxis
+  " Plug 'vim-syntastic/syntastic'
+
+ "Plug 'mattn/emmet-vim'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/1.x',
+  \ 'for': [
+    \ 'javascript',
+    \ 'typescript',
+    \ 'css',
+    \ 'less',
+    \ 'scss',
+    \ 'json',
+    \ 'graphql',
+    \ 'markdown',
+    \ 'vue',
+    \ 'lua',
+    \ 'php',
+    \ 'python',
+    \ 'ruby',
+    \ 'html',
+    \ 'swift' ] }
+call plug#end()
+
+let g:coc_global_extensions = [ 'coc-snippets' ]
+
+"set relativenumber
+"so ~/.vim/plugins.vim
+"so ~/.vim/plugin-config.vim
+"so ~/.vim/maps.vim
+
+"Archivos enlazados
+so C:\Program Files\Vim\coc.vim
+so C:\Program Files\Vim\config.vim
+so C:\Program Files\Vim\config_plugins.vim
+
+"  -----------------------------------
+"   Mapeo de tecla
+"  -----------------------------------
+
+"  <Leader> valor definido barra espacio
+let mapleader=" "
+let NERDTreeQuitOnOpen=1
+nmap <Leader>nt :NERDTreeFind<CR>
+" Guardar y Saliar del cocumento
+nmap <Leader>w :w<CR>
+" Cierra un buffer
+nmap <Leader>q :bd<CR> 
+"Fuerza el cierre
+nmap <Leader>a :q!<CR> 
+" Cambiar entre buffers
+nmap <Leader>o :bp<CR>
+nmap <Leader>p :bn<CR>
+
+nmap <Leader>c :close<CR>
+"Abrir documento desde explorador
+nmap <Leader>b :browse e<CR>
+  "Atajo a easymotion 
+nmap <Leader>s <Plug>(easymotion-s2)
+  " Ingresar al modo visual
+imap jj <ESC>
+
+" si da error ejecutable escribir en linea de comandos
+" npm install -g prettier
+nmap <Leader>r <Plug>(Prettier)
+
+
+
+
+"  -----------------------------------
+"   Teclas Autocompletador o Snippets
+"  -----------------------------------
+
+
+"  -----------------------------------
+"   Referencias
+"  -----------------------------------
+
+" Video Udemy vim gratis
+" 
+" https://underc0de.org/foro/gnulinux/vim-instalar-plugins-para-vim/msg110729/
+" https://stackoverflow.com/questions/13525518/how-to-hide-the-menu-tool-bar-of-gvim
+"
+" Repos Usados
+" https://github.com/martincrb/system-config/blob/master/.vimrc
+" https://github.com/nschurmann/configs
